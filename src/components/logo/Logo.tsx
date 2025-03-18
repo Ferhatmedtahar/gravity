@@ -1,7 +1,15 @@
 import Image from "next/image";
-import GravityLogo from "../../../public/gravityLogo.png";
+
 export default function Logo() {
   return (
-    <Image src={GravityLogo} alt="Gravity Logo" width={100} height={100} />
+    <Image
+      src="/gravityLogo.png"
+      alt="Gravity Logo"
+      width={80}
+      height={80}
+      className="w-auto h-4 sm:h-5 md:h-6 lg:h-8 focus:outline-none   cursor-pointer   object-contain"
+      aria-label="Gravity Logo"
+      tabIndex={1}
+    />
   );
 }

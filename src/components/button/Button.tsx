@@ -6,10 +6,22 @@ type ButtonProps = {
   variant?: "primary" | "secondary";
   size?: "small" | "medium" | "large";
   children: React.ReactNode;
+  ariaLabel?: string;
 };
-export default function Button({ icon, variant, size, children }: ButtonProps) {
+export default function Button({
+  icon,
+  variant,
+  size,
+  children,
+  ariaLabel,
+}: ButtonProps) {
   return (
-    <button className={variants({ variant, size })}>
+    <button
+      className={variants({ variant, size })}
+      aria-label={
+        ariaLabel || typeof children === "string" ? "button" : undefined
+      }
+    >
       {icon}
       {children}
     </button>
