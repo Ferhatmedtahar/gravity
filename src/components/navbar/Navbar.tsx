@@ -1,113 +1,3 @@
-// "use client";
-// import Link from "next/link";
-// import { useState } from "react";
-// import Button from "../button/Button";
-// import Logo from "../logo/Logo";
-
-// export default function Navbar() {
-//   const [isMenuOpen, setIsMenuOpensOpen] = useState(false);
-
-//   return (
-//     <header>
-//       <nav className="flex items-center  justify-between gap-10 ">
-//         <Logo />
-
-//         <ul className="hidden md:flex items-center gap-6 ">
-//           <li className="uppercase text-sm hover:text-hover transition-colors duration-100">
-//             <Link href="/about">about us</Link>
-//           </li>
-//           <li className="uppercase text-sm hover:text-hover transition-colors duration-100">
-//             <Link href="/services">our services</Link>
-//           </li>
-//           <li className="uppercase text-sm hover:text-hover transition-colors duration-100">
-//             <Link href="/work">work with us</Link>
-//           </li>
-//           <li className="uppercase text-sm hover:text-hover transition-colors duration-100">
-//             <Link href="/blog">blog</Link>
-//           </li>
-//         </ul>
-//         <div className="hidden md:block">
-//           <Button
-//             variant="secondary"
-//             size="medium"
-//             icon={<div className="h-3 w-3 btn-gradient rounded-full"></div>}
-//           >
-//             get in touch
-//           </Button>
-//         </div>
-
-//         {/* mobile menu */}
-
-//         <button
-//           className="text-foreground p-2 md:hidden "
-//           onClick={() => setIsMenuOpensOpen(!isMenuOpen)}
-//         >
-//           {isMenuOpen ? (
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               width="24"
-//               height="24"
-//               viewBox="0 0 24 24"
-//               fill="none"
-//               stroke="currentColor"
-//               strokeWidth="2"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//             >
-//               <line x1="18" y1="6" x2="6" y2="18"></line>
-//               <line x1="6" y1="6" x2="18" y2="18"></line>
-//             </svg>
-//           ) : (
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               width="24"
-//               height="24"
-//               viewBox="0 0 24 24"
-//               fill="none"
-//               stroke="currentColor"
-//               strokeWidth="2"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//             >
-//               <line x1="3" y1="12" x2="21" y2="12"></line>
-//               <line x1="3" y1="6" x2="21" y2="6"></line>
-//               <line x1="3" y1="18" x2="21" y2="18"></line>
-//             </svg>
-//           )}
-//         </button>
-//         {isMenuOpen && (
-//           <div className="absolute top-16 left-0 right-0 bg-background shadow-lg  z-50 md:hidden">
-//             <ul className="flex flex-col py-4 px-6">
-//               <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-100">
-//                 <Link href="/about">about us</Link>
-//               </li>
-//               <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-100">
-//                 <Link href="/services">our services</Link>
-//               </li>
-//               <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-100">
-//                 <Link href="/work">work with us</Link>
-//               </li>
-//               <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-100 ">
-//                 <Link href="/blog">blog</Link>
-//               </li>
-//               <li className="py-4">
-//                 <Button
-//                   variant="secondary"
-//                   size="small"
-//                   icon={
-//                     <div className="h-3 w-3 btn-gradient rounded-full"></div>
-//                   }
-//                 >
-//                   get in touch
-//                 </Button>
-//               </li>
-//             </ul>
-//           </div>
-//         )}
-//       </nav>
-//     </header>
-//   );
-// }
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -118,10 +8,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  // Fix the typo in your state setter name
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Handle mounting for SSR
   useEffect(() => {
     setMounted(true);
   }, []);

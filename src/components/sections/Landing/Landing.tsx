@@ -2,7 +2,7 @@ import Button from "@/components/button/Button";
 
 export default function Landing() {
   return (
-    <section className=" font-semibold text-center flex items-center justify-start flex-col gap-2 sm:mb-14 mb-10 md:mb-24 ">
+    <section className=" font-semibold text-center flex items-center justify-start flex-col gap-2 sm:mb-14 mb-10 min-h-[60vh] ">
       <h1 className="text-4xl sm:text-5xl md:text-6xl mb-5  sm:mb-6 md:mb-8 ">
         Balancing
       </h1>
