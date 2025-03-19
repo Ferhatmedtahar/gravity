@@ -18,22 +18,22 @@ export default function Navbar() {
     <nav className="flex items-center justify-between gap-10">
       <Logo />
 
-      <ul className="hidden md:flex items-center gap-6 font-light">
-        <li className="uppercase text-sm hover:text-hover transition-colors duration-300">
-          <Link href="/about">about us</Link>
+      <ul className="hidden lg:flex items-center gap-6 font-light">
+        <li className="uppercase text-sm hover:text-primary transition-colors duration-300">
+          <Link href="/">about us</Link>
         </li>
-        <li className="uppercase text-sm hover:text-hover transition-colors duration-300">
-          <Link href="/services">our services</Link>
+        <li className="uppercase text-sm hover:text-primary transition-colors duration-300">
+          <Link href="/">our services</Link>
         </li>
-        <li className="uppercase text-sm hover:text-hover transition-colors duration-300">
-          <Link href="/work">work with us</Link>
+        <li className="uppercase text-sm hover:text-primary transition-colors duration-300">
+          <Link href="/">work with us</Link>
         </li>
-        <li className="uppercase text-sm hover:text-hover transition-colors duration-300">
-          <Link href="/blog">blog</Link>
+        <li className="uppercase text-sm hover:text-primary transition-colors duration-300">
+          <Link href="/">blog</Link>
         </li>
       </ul>
 
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Button variant="primary" size="medium">
           get in touch
         </Button>
@@ -41,25 +41,27 @@ export default function Navbar() {
 
       {/* mobile menu button with animation */}
       <button
-        className="text-foreground p-2 md:hidden relative z-50"
+        className="text-foreground p-3 lg:hidden relative z-50"
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
         {" "}
-        <div className="w-6 h-6 flex items-center justify-center">
+        <div className="w-10 h-10 flexCenter">
+          {" "}
+          {/* Increased width & height */}
           <span
-            className={`block absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
-              isMenuOpen ? "rotate-45" : "-translate-y-1.5"
+            className={`block absolute h-0.5 w-10 bg-current transform transition duration-300 ease-in-out ${
+              isMenuOpen ? "rotate-45" : "-translate-y-2.5"
             }`}
           />
           <span
-            className={`block absolute h-0.5 w-6 bg-current transition-opacity duration-300 ease-in-out ${
+            className={`block absolute h-0.5 w-10 bg-current transition-opacity duration-300 ease-in-out ${
               isMenuOpen ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-            className={`block absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
-              isMenuOpen ? "-rotate-45" : "translate-y-1.5"
+            className={`block absolute h-0.5 w-10 bg-current transform transition duration-300 ease-in-out ${
+              isMenuOpen ? "-rotate-45" : "translate-y-2.5"
             }`}
           />
         </div>
@@ -68,29 +70,29 @@ export default function Navbar() {
       {/* Mobile menu with animation */}
       {mounted && (
         <div
-          className={`absolute top-0 left-0 right-0  bg-background z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
+          className={`absolute -top-4 left-0 right-0  bg-background z-40 transform transition-transform duration-300 ease-in-out lg:hidden ${
             isMenuOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          <div className="flex flex-col justify-center h-full px-6 shadow-xl ">
+          <div className="flex flex-col justify-center h-full px-6 shadow-xl   border-b border-hover ">
             <ul className="flex flex-col space-y-6 pt-10 items-center">
-              <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-300">
-                <Link href="/about" onClick={toggleMenu}>
+              <li className="py-2 uppercase text-sm hover:text-primary transition-colors duration-300">
+                <Link href="/" onClick={toggleMenu}>
                   about us
                 </Link>
               </li>
-              <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-300">
-                <Link href="/services" onClick={toggleMenu}>
+              <li className="py-2 uppercase text-sm hover:text-primary transition-colors duration-300">
+                <Link href="/" onClick={toggleMenu}>
                   our services
                 </Link>
               </li>
-              <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-300">
-                <Link href="/work" onClick={toggleMenu}>
+              <li className="py-2 uppercase text-sm hover:text-primary transition-colors duration-300">
+                <Link href="/" onClick={toggleMenu}>
                   work with us
                 </Link>
               </li>
-              <li className="py-2 uppercase text-sm hover:text-hover transition-colors duration-300">
-                <Link href="/blog" onClick={toggleMenu}>
+              <li className="py-2 uppercase text-sm hover:text-primary transition-colors duration-300">
+                <Link href="/" onClick={toggleMenu}>
                   blog
                 </Link>
               </li>

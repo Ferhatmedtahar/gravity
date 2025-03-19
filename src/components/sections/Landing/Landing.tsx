@@ -2,16 +2,14 @@ import Button from "@/components/button/Button";
 
 export default function Landing() {
   return (
-    <section className=" font-semibold text-center flex items-center justify-start flex-col gap-2 sm:mb-14 mb-10 min-h-[60vh] ">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl mb-5  sm:mb-6 md:mb-8 ">
-        Balancing
-      </h1>
+    <section className="  text-center flex items-center justify-start flex-col gap-2  mb-10 sm:mt-14 sm:mb-14 min-h-[60vh] ">
+      <h1 className="text-4xl sm:text-5xl md:text-7xl mb-0.5 ">Balancing</h1>
 
       {/* Subheading */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl ">Crypto Markets</h2>
+      <h2 className="text-4xl sm:text-5xl md:text-7xl ">Crypto Markets</h2>
 
       {/* Description */}
-      <p className="text-lg text-slate-300 font-light max-w-md md:max-w-lg mx-auto my-5">
+      <p className="text-lg md:text-xl leading-8  font-normal max-w-sm md:max-w-md mx-auto my-5 sm:my-10">
         Our fully automated proprietary quantitative trading software provides
         24/7 liquidity to 170+ crypto assets across 25+ centralized spot and
         derivative crypto exchanges.

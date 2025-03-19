@@ -1,10 +1,14 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const satochi = localFont({
+  src: "../../fonts/Satoshi-Variable.ttf",
+  variable: "--font-satoshi",
+});
+
 export const metadata: Metadata = {
   title: "Gravity | Crypto Market",
   description:
@@ -33,8 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}min-h-screen antialiased px-8 py-8`}>
-        <Navbar />
+      <body
+        className={`${satochi.variable} text-white-50 min-h-screen antialiased container max-container padding-container mt-3 selection:bg-secondary`}
+      >
+        <header className="sticky top-4 border-b border-b-white-50/50 pb-2">
+          <Navbar />
+        </header>
 
         {children}
 

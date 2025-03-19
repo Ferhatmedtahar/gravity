@@ -3,9 +3,9 @@ import { cva, type VariantProps } from "class-variance-authority";
 export type ButtonVariants = VariantProps<typeof variants>;
 
 const variant = {
-  primary: `btn-gradient text-white`,
+  primary: `btn-gradient text-white-50 btn-wipe`,
   secondary:
-    "bg-transparent text-white hover:text-hover hover:cursor-pointer transition-colors duration-100",
+    "bg-transparent  hover:text-primary hover:cursor-pointer transition-colors duration-100",
 };
 const size = {
   small: ["text-xs", "px-2", "py-1.5"],
