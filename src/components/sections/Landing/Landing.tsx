@@ -11,7 +11,7 @@ export default function Landing() {
       <h2 className="text-3xl sm:text-4xl md:text-5xl ">Crypto Markets</h2>
 
       {/* Description */}
-      <p className="text-lg text-slate-300 font-normal max-w-md md:max-w-lg mx-auto my-5">
+      <p className="text-lg text-slate-300 font-light max-w-md md:max-w-lg mx-auto my-5">
         Our fully automated proprietary quantitative trading software provides
         24/7 liquidity to 170+ crypto assets across 25+ centralized spot and
         derivative crypto exchanges.
