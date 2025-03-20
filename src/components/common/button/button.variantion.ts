@@ -11,9 +11,9 @@ const size = {
   small: ["text-xs", "px-2", "py-1.5"],
   medium: ["text-sm", "px-3", "py-2"],
   large: [
-    "text-base",
-    "md:px-4",
-    "md:py-2.5",
+    "text-lg",
+    "md:px-5",
+    "md:py-3",
     "px-3",
     "py-2",
     "sm:px-3.5",
