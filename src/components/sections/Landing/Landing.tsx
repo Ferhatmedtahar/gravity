@@ -27,18 +27,36 @@ export default function Landing() {
       >
         <source src="/hero-animation.mp4" type="video/mp4" />
       </video> */}
-      <div className="absolute bottom-0 left-0 w-full h-full -z-20">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-70"
-        >
-          <source src="/hero-animation.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 top-1/2 bg-gradient-to-b from-transparent via-black/30 to-black/70"></div>{" "}
-        {/* Gradient overlay */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-1/2 -z-10"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(19,20,23,1) 0%, rgba(19,20,23,0.8) 20%, rgba(19,20,23,0.4) 40%, rgba(19,20,23,0) 100%)",
+        }}
+      >
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute bottom-0 w-full opacity-80"
+            style={{
+              transform: "scale(1.1)",
+              objectFit: "cover",
+              height: "100%",
+            }}
+          >
+            <source src="/hero-animation.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(19,20,23,0.2) 0%, rgba(19,20,23,0.4) 40%, rgba(19,20,23,0.1) 100%)",
+          }}
+        ></div>
       </div>
     </section>
   );
