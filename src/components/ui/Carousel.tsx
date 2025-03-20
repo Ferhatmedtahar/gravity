@@ -3,10 +3,16 @@
 import { testimonials } from "@/src/data/testimonials";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Carousel() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(2);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  });
 
   const handlePrev = () => {
     setCurrentTestimonial((prev) =>

@@ -2,6 +2,7 @@ import About from "@/src/components/sections/about/About";
 import Features from "@/src/components/sections/features/Features";
 import Landing from "@/src/components/sections/Landing/Landing";
 import Testimonials from "@/src/components/sections/Testimonials/Testimonials";
+import Contact from "../components/sections/contact/Contact";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <Features />
       <Testimonials />
+      <Contact />
     </main>
   );
 }

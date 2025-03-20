@@ -3,7 +3,7 @@ import Carousel from "../../ui/Carousel";
 export default function Testimonials() {
   return (
     <section
-      id="contact"
+      id="testimonials"
       className=" flex flex-col items-center gap-2  sm:my-14 my-10"
     >
       <h2 className=" text-2xl sm:text-4xl md:text-6xl">
