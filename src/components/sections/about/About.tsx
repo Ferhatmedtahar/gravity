@@ -1,10 +1,13 @@
 "use client";
 import GridItem from "./GridItem";
-import { GridItemProps, gridItems } from "./gridItems";
+import { GridItemProps, gridItems } from "../../../data/gridItems";
 
 export default function About() {
   return (
-    <section className="text-center flex items-center justify-start flex-col gap-2 sm:mb-14 mb-10">
+    <section
+      id="about"
+      className="text-center flex items-center justify-start flex-col gap-2 sm:mb-14 mb-10"
+    >
       <h1 className="capitalize text-3xl sm:text-4xl md:text-7xl">
         About Gravity Team
       </h1>

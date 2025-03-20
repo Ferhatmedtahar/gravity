@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #141619;
+  --foreground: #fefefe;
+  --background: #141619;
   --primary: #5fa4e6;
   --secondary: #d2ab67;
   --tertiary: #665dcd;
@@ -16,24 +16,83 @@
   --color-tertiary: var(--tertiary);
   --font-satoshi: var(--font-satoshi);
   --color-white-50: #e7e7e7;
+  --animate-spin: spin 30s infinite ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #141619;
-    --foreground: #ededed;
     --primary: #5fa4e6;
     --secondary: #d2ab67;
     --tertiary: #665dcd;
+    --foreground: #ffffff;
+    --background: #141619;
   }
 }
 
 body {
+  font-family: var(--font-satoshi), Helvetica, sans-serif;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-satoshi), Helvetica, sans-serif;
 }
 
+.btn-wipe {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid var(--secondary);
+  background: transparent;
+  color: var(--foreground);
+  border-radius: 3px;
+}
+
+.btn-wipe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--secondary) 0%,
+    var(--primary) 45%,
+    var(--tertiary) 100%
+  );
+
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+  mix-blend-mode: screen;
+}
+
+.btn-wipe:hover::before {
+  animation: wipeLeftToRight 0.5s forwards;
+}
+
+.btn-wipe:not(:hover)::before {
+  animation: wipeRightToLeft 0.5s forwards;
+}
+
+.btn-wipe span {
+  position: relative;
+  z-index: 1;
+}
+/* Your existing utility classes remain unchanged */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.purple-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--secondary) 0%,
+    var(--primary) 45%,
+    var(--tertiary) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @utility max-container {
   @apply mx-auto max-w-[1440px];
 }
@@ -76,27 +135,6 @@ body {
   }
 }
 
-/* Your existing utility classes remain unchanged */
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.purple-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--secondary) 0%,
-    var(--primary) 45%,
-    var(--tertiary) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 @keyframes wipeLeftToRight {
   0% {
     transform: translateX(0%);
@@ -113,42 +151,4 @@ body {
   100% {
     transform: translateX(0%);
   }
-}
-
-.btn-wipe {
-  position: relative;
-  overflow: hidden;
-  border: 2px solid var(--primary);
-  background: transparent;
-  color: var(--foreground);
-  border-radius: 3px;
-}
-
-.btn-wipe::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    var(--secondary) 0%,
-    var(--primary) 45%,
-    var(--tertiary) 100%
-  );
-
-  transform: translateX(0%);
-  transition: transform 0.5s ease-in-out;
-  mix-blend-mode: screen;
-}
-
-.btn-wipe:hover::before {
-  animation: wipeLeftToRight 0.5s forwards;
-}
-
-.btn-wipe:not(:hover)::before {
-  animation: wipeRightToLeft 0.5s forwards;
-}
-
-.btn-wipe span {
-  position: relative;
-  z-index: 1;
 }

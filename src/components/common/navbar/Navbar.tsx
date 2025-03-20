@@ -74,7 +74,7 @@ export default function Navbar() {
             isMenuOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          <div className="flex flex-col justify-center h-full px-6 shadow-xl   border-b border-hover ">
+          <div className="flex flex-col justify-center h-full px-6 shadow-xl   border-b border-primary ">
             <ul className="flex flex-col space-y-6 pt-10 items-center">
               <li className="py-2 uppercase text-sm hover:text-primary transition-colors duration-300">
                 <Link href="/" onClick={toggleMenu}>

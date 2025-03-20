@@ -1,5 +1,5 @@
-import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/src/components/common/footer/Footer";
+import Navbar from "@/src/components/common/navbar/Navbar";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -40,7 +40,8 @@ export default function RootLayout({
       <body
         className={`${satochi.variable} text-white-50 min-h-screen antialiased container max-container padding-container mt-3 selection:bg-secondary`}
       >
-        <header className="sticky top-4 border-b border-b-white-50/50 pb-2">
+        {/* sticky top-4 border-b border-b-white-50/50 pb-2 */}
+        <header className="">
           <Navbar />
         </header>
 
