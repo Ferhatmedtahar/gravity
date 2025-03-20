@@ -41,7 +41,7 @@ export default function Navbar() {
 
       {/* mobile menu button with animation */}
       <button
-        className="text-foreground p-3 lg:hidden relative z-50"
+        className="text-foreground p-2 sm:p-3 lg:hidden relative z-50"
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
@@ -50,18 +50,18 @@ export default function Navbar() {
           {" "}
           {/* Increased width & height */}
           <span
-            className={`block absolute h-0.5 w-10 bg-current transform transition duration-300 ease-in-out ${
-              isMenuOpen ? "rotate-45" : "-translate-y-2.5"
+            className={`block absolute h-0.5 w-6 lg:w-10 bg-current transform transition duration-300 ease-in-out ${
+              isMenuOpen ? "rotate-45" : "-translate-y-2 md:-translate-y-2.5"
             }`}
           />
           <span
-            className={`block absolute h-0.5 w-10 bg-current transition-opacity duration-300 ease-in-out ${
+            className={`block absolute h-0.5 w-6 lg:w-10 bg-current transition-opacity duration-300 ease-in-out ${
               isMenuOpen ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-            className={`block absolute h-0.5 w-10 bg-current transform transition duration-300 ease-in-out ${
-              isMenuOpen ? "-rotate-45" : "translate-y-2.5"
+            className={`block absolute h-0.5 w-6 md:w-10 bg-current transform transition duration-300 ease-in-out ${
+              isMenuOpen ? "-rotate-45" : "translate-y-2 md:translate-y-2.5"
             }`}
           />
         </div>
