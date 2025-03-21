@@ -17,6 +17,19 @@
   --font-satoshi: var(--font-satoshi);
   --color-white-50: #e7e7e7;
   --animate-spin: spin 30s infinite ease-in-out;
+  --animate-pulse: pulse 5s infinite ease-in-out;
+  --animate-spin-and-go: spin-and-go 40s infinite ease-in-out;
+  @keyframes spin-and-go {
+    0% {
+      transform: translateX(-80px) rotate(0deg);
+    }
+    50% {
+      transform: translateX(0) rotate(180deg);
+    }
+    100% {
+      transform: translateX(-80px) rotate(360deg);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {

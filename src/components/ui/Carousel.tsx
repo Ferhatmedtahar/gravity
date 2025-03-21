@@ -27,7 +27,7 @@ export default function Carousel() {
   return (
     <div className="flexCenter flex-col gap-8">
       {/* Buttons */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 my-2">
         <button
           onClick={handlePrev}
           className=" h-8 w-8 md:h-12 md:w-12  text-lg md:text-2xl rounded-full btn-gradient focus:outline-none focus:ring-2 focus:ring-primary "
@@ -43,13 +43,13 @@ export default function Carousel() {
       </div>
 
       {/* Testimonial Content with Smooth Transition */}
-      <div className="relative min-h-[13rem] w-full flex items-center justify-center">
+      <div className="relative h-[350px] sm:h-[450px] w-full flex items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentTestimonial}
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            exit={{ opacity: 0, x: -10 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className=" flexCenter flex-col  gap-4 text-center px-4"
           >

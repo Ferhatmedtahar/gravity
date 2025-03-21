@@ -10,7 +10,7 @@ export default function Features() {
         alt="blobs"
         width={500}
         height={500}
-        className=" opacity-80 blur-xs  absolute top-10 -left-[60%] sm:-left-[30%] lg:-left-[40%] -z-10 focus:outline-none   cursor-default  animate-spin "
+        className=" opacity-80 blur-3xl  absolute top-10 -left-[60%] sm:-left-[30%] lg:-left-[30%] -z-10 focus:outline-none   cursor-default  animate-spin-and-go "
         aria-label="Blob"
       />
       <div className="flex items-center flex-col md:flex-row md:justify-between w-full gap-12 ">
