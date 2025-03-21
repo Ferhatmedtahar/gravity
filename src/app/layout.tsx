@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satochi.variable} text-white-50 min-h-screen antialiased  selection:bg-secondary  `}
+        className={`${satochi.variable} text-white-50 min-h-screen antialiased  selection:bg-secondary selection:text-gray-700 `}
       >
         {/* sticky top-4 border-b border-b-white-50/50 pb-2 */}
         <header className=" relative container max-container padding-container mt-3">
