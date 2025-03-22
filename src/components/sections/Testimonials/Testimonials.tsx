@@ -1,8 +1,11 @@
+import * as motion from "motion/react-client";
 import Carousel from "../../ui/Carousel";
-
 export default function Testimonials() {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
       id="testimonials"
       className=" flex flex-col items-center gap-2  sm:my-14 my-10"
     >
@@ -14,6 +17,6 @@ export default function Testimonials() {
         happy to share some of their feedback below
       </p>
       <Carousel />
-    </section>
+    </motion.section>
   );
 }

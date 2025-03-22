@@ -1,10 +1,16 @@
 "use client";
-
+import { motion } from "motion/react";
 import Image from "next/image";
 import MarqueeCompoent from "../../ui/MarqueeCompoent";
 export default function Features() {
   return (
-    <section id="features" className=" relative  sm:my-14 my-10">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
+      id="features"
+      className=" relative  sm:my-14 my-10"
+    >
       <Image
         src="/blobs/middle-left-2.png"
         alt="blobs"
@@ -19,6 +25,6 @@ export default function Features() {
         </p>
         <MarqueeCompoent />
       </div>
-    </section>
+    </motion.section>
   );
 }

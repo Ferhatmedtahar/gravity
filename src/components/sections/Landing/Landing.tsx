@@ -1,21 +1,45 @@
 import Button from "@/src/components/common/button/Button";
+import * as motion from "motion/react-client";
 import { CurrencyMarquee } from "../../ui/CurrencyMarquee";
+// import { MotionWrapper } from "../../motion/MotionWrapper";
 
 export default function Landing() {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
       id="landing"
       className=" text-center flex items-center justify-start flex-col gap-2  mb-10 sm:mt-14 sm:mb-14 min-h-screen "
     >
-      <h1 className="text-4xl sm:text-5xl md:text-7xl mb-0.5 ">Balancing</h1>
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeInOut", delay: 0.1 }}
+        className="text-4xl sm:text-5xl md:text-7xl mb-0.5 "
+      >
+        Balancing
+      </motion.h1>
 
-      <h2 className="text-4xl sm:text-5xl md:text-7xl ">Crypto Markets</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeInOut", delay: 0.25 }}
+        className="text-4xl sm:text-5xl md:text-7xl "
+      >
+        Crypto Markets
+      </motion.h2>
 
-      <p className="text-lg md:text-xl leading-8  font-normal max-w-sm md:max-w-md mx-auto my-5 sm:my-10">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeInOut", delay: 0.4 }}
+        className="text-lg md:text-xl leading-8  font-normal max-w-sm md:max-w-md mx-auto my-5 sm:my-10"
+      >
         Our fully automated proprietary quantitative trading software provides
         24/7 liquidity to 170+ crypto assets across 25+ centralized spot and
         derivative crypto exchanges.
-      </p>
+      </motion.p>
       <Button variant="primary" size="large">
         get in touch
       </Button>
@@ -54,6 +78,6 @@ export default function Landing() {
       <div className="absolute bottom-0 bg-white-50 inset-x-0  h-[2rem] md:h-[2.5rem] lg:h-[3rem]">
         <CurrencyMarquee speed={3} fadeWidth={80} reverse />
       </div>
-    </section>
+    </motion.section>
   );
 }

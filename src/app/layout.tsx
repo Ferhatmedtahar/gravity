@@ -41,7 +41,7 @@ export default function RootLayout({
         className={`${satochi.variable} text-white-50 min-h-screen antialiased  selection:bg-secondary selection:text-gray-700 `}
       >
         {/* sticky top-4 border-b border-b-white-50/50 pb-2 */}
-        <header className=" relative container max-container padding-container mt-28 lg:mt-3">
+        <header className=" relative container max-container padding-container mt-28 lg:mt-3  sm:mb-20 ">
           <Navbar />
         </header>
 

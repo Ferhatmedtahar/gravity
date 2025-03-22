@@ -1,14 +1,22 @@
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../common/button/Button";
-
 export default function Contact() {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
       id="contact"
       className="relative flex flex-col items-center gap-12 md:gap-16 lg:gap-20  sm:my-14 my-10"
     >
-      <div className="flex flex-col md:flex-row gap-8 md:gap-20 items-center max-w-4xl ">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
+        className="flex flex-col md:flex-row gap-8 md:gap-20 items-center max-w-4xl "
+      >
         {/** title with background */}
         <div className=" ">
           <h2 className=" text-2xl sm:text-4xl md:text-6xl  font-medium ">
@@ -52,11 +60,16 @@ export default function Contact() {
             </span>
           </Link>
         </div>
-      </div>
+      </motion.div>
 
       {/*contact us  blobs */}
 
-      <div className="relative flexCenter flex-col gap-8 sm:gap-12 mt-14">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
+        className="relative flexCenter flex-col gap-8 sm:gap-12 mt-14"
+      >
         <h2 className="uppercase text-xl sm:text-3xl md:text-4xl   ">
           contact us
         </h2>
@@ -95,7 +108,7 @@ export default function Contact() {
           className="   blur-xs  opacity-90 absolute -bottom-10 -left-[60%] sm:-left-[30%] lg:left-[40%] -z-10 focus:outline-none   cursor-default  animate-pulse "
           aria-label="Blob"
         />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
